@@ -8,33 +8,27 @@ A real-world SQL portfolio project that simulates advanced data analysis tasks u
 
 The dataset was scraped from Zepto’s official product listings and includes typical e-commerce inventory features. It was sourced from [Kaggle](https://www.kaggle.com/datasets) and reflects real-world catalog inconsistencies.
 
-🧾 Columns:
+Each row represents a unique SKU (Stock Keeping Unit) for a product.
 
-sku_id: Unique identifier for each product entry (Synthetic Primary Key)
-
-name: Product name as it appears on the app
-
-category: Product category like Fruits, Snacks, Beverages, etc.
-
-mrp: Maximum Retail Price (originally in paise, converted to ₹)
-
-discountPercent: Discount applied on MRP
-
-discountedSellingPrice: Final price after discount (also converted to ₹)
-
-availableQuantity: Units available in inventory
-
-weightInGms: Product weight in grams
-
-outOfStock: Boolean flag indicating stock availability
-
-quantity: Number of units per package (mixed with grams for loose produce)
+### 🔑 Columns:
+| Column | Description |
+|--------|-------------|
+| `sku_id` | Unique product identifier (synthetic primary key) |
+| `name` | Product name |
+| `category` | Product category (e.g., Beverages, Fruits) |
+| `mrp` | Maximum Retail Price (converted from paise to ₹) |
+| `discountPercent` | Percentage discount applied |
+| `discountedSellingPrice` | Final selling price (₹) |
+| `availableQuantity` | Available inventory units |
+| `weightInGms` | Product weight in grams |
+| `outOfStock` | Boolean flag for stock availability |
+| `quantity` | Units per package (mix of units and weight) |
 
 ---
 
-🔧 Project Workflow
-1. Database & Table Creation
+## 🗃️ SQL Database Setup
 
+```sql
 CREATE TABLE zepto (
   sku_id SERIAL PRIMARY KEY,
   category VARCHAR(120),
@@ -48,12 +42,6 @@ CREATE TABLE zepto (
   quantity INTEGER
 );
 
----
-
-2. Data Import
-   
-Loaded CSV using pgAdmin's import feature.
-Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
 
 
 ## 🔍 Exploratory Data Analysis (EDA)
