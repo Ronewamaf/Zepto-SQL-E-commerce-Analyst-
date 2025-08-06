@@ -42,10 +42,14 @@ CREATE TABLE zepto (
   quantity INTEGER
 );
 
-Data Import
-I used the import tool  
+---
 
-## 🔍 Exploratory Data Analysis (EDA)
+###📥 Data Import
+I used the import tool
+
+---
+
+### 🔍 Exploratory Data Analysis (EDA)
 
 ```sql
 -- Total Records
