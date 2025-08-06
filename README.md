@@ -24,6 +24,7 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product.
 | `outOfStock` | Boolean flag for stock availability |
 | `quantity` | Units per package (mix of units and weight) |
 
+
 ---
 
 ## 🗃️ SQL Database Setup
@@ -41,15 +42,18 @@ CREATE TABLE zepto (
   outOfStock BOOLEAN,
   quantity INTEGER
 );
+````
 
 ---
 
-###📥 Data Import
-I used the import tool
+## 📥 Data Import
+
+I used the imort tool.
+```
 
 ---
 
-### 🔍 Exploratory Data Analysis (EDA)
+## 🔍 Exploratory Data Analysis (EDA)
 
 ```sql
 -- Total Records
